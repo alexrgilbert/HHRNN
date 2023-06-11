@@ -41,6 +41,8 @@ from model import generate_target_continuous_go_nogo
 from model import construct_tf
 from model import loss_op
 
+tf.compat.v1.disable_eager_execution()
+
 # Parse input arguments
 parser = argparse.ArgumentParser(description='Training rate RNNs')
 parser.add_argument('--gpu', required=False,
